@@ -5,7 +5,6 @@ public class DummyDic {
         return "Неизвестное слово. " + eng;
     }
 
-
     public static void main(String[] args) {
         DummyDic dummy = new DummyDic();
         String word = dummy.engToRus("poop");

@@ -25,17 +25,16 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
+        Calculator calculator = new Calculator();
         int resultSum = Calculator.sum(10);
-        System.out.println(resultSum);
-        Calculator calculatorMultiply = new Calculator();
-        int rsl = calculatorMultiply.multiply(5);
-        System.out.println(rsl);
+        int resultMultiply = calculator.multiply(5);
         int resultMinus = Calculator.minus(2);
+        int resultSumAllOperation = calculator.sumAllOperation(7);
+
+        System.out.println(resultSum);
+        System.out.println(resultMultiply);
         System.out.println(resultMinus);
-        Calculator calculatorDivide = new Calculator();
-        System.out.println(calculatorDivide.divide(3));
-        Calculator calculatorSumAllOperation = new Calculator();
-        int resultSumAllOperation = calculatorSumAllOperation.sumAllOperation(7);
+        System.out.println(calculator.divide(3));
         System.out.println(resultSumAllOperation);
     }
 }

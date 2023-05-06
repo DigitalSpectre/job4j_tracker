@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class PointTest {
     @Test
-    public void When200To000Then2(){
+    public void when200To000Then2() {
         double expected = 2;
         Point a3d = new Point(2, 0, 0);
         Point b3d = new Point(0, 0, 0);
@@ -14,7 +14,7 @@ class PointTest {
     }
 
     @Test
-    public void When100To110Then1(){
+    public void when100To110Then1() {
         double expected = 1;
         Point a3d = new Point(1, 0, 0);
         Point b3d = new Point(1, 1, 0);
@@ -23,7 +23,7 @@ class PointTest {
     }
 
     @Test
-    public void When220To222Then2(){
+    public void when220To222Then2() {
         double expected = 2;
         Point a3d = new Point(2, 2, 0);
         Point b3d = new Point(2, 2, 2);

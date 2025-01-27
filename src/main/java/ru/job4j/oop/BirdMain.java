@@ -10,9 +10,9 @@ public class BirdMain {
             }
         };
 /**
-//        public void flyInside() {
-//            System.out.println("Попугай летает только внутри анонимного класса");
-//        }
+        public void flyInside() {
+            System.out.println("Попугай летает только внутри анонимного класса");
+        }
  */
     }
 

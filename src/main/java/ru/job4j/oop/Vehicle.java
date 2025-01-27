@@ -14,6 +14,7 @@ public abstract class Vehicle {
     public void brake() {
         System.out.println("Стандартная тормозная система");
     }
-
+/**
     //... геттеры и сеттеры ...
+ */
 }

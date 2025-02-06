@@ -55,6 +55,12 @@ public class Tracker {
     }
 
     public void delete(int id) {
-        items[indexOf(id)] = null;
+        int index = indexOf(id);
+        int start = index + 1;
+        if (index != -1) {
+            System.arraycopy(items, start, items, index, items.length - start - 1);
+            items[size - 1] = null;
+            size--;
+        }
     }
 }

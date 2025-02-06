@@ -53,4 +53,8 @@ public class Tracker {
         }
         return result;
     }
+
+    public void delete(int id) {
+        items[indexOf(id)] = null;
+    }
 }

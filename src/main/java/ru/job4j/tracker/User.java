@@ -24,4 +24,12 @@ public class User {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public String toString() {
+        return "User{"
+                + "id=" + id
+                + ", username='" + username + '\''
+                + ", password='" + password + '\'' + '}';
+    }
 }

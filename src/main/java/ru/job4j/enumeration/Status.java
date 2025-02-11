@@ -1,25 +1,50 @@
 package ru.job4j.enumeration;
 
-public enum Status implements Code {
-    ACCEPTED(1, "Принят"),
-    IN_WORK(2, "В работе"),
-    WAITING(3, "Ожидает клиента"),
-    FINISHED(4, "Завершен");
+public enum Status {
+    ACCEPTED("Принят") {
+        private String message = "Автомобиль принят на СТО";
 
-    private final String text;
-    private final int code;
+        @Override
+        public String getMessage() {
+            return message;
+        }
 
-    Status(int code, String text) {
-        this.text = text;
-        this.code = code;
+    },
+    IN_WORK("В работе") {
+        private String message = "Автомобиль в работе";
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+    },
+    WAITING("Ожидание") {
+        private String message = "Автомобиль ожидает запчасти";
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+    },
+    FINISHED("Работы завершены") {
+        private String message = "Все работы завершены";
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+    };
+
+    private String info;
+
+    Status(String info) {
+        this.info = info;
     }
 
-    public String info() {
-        return text;
+    public String getInfo() {
+        return info;
     }
 
-    @Override
-    public int code() {
-        return code;
-    }
+    public abstract String getMessage();
+
 }

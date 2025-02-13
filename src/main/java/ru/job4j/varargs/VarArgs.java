@@ -2,16 +2,14 @@ package ru.job4j.varargs;
 
 public class VarArgs {
 
-    public String text(String a) {
+    public static String text(String[] strings) {
         return "";
     }
 
-    public String text(String a, String b) {
-        return "";
-    }
-
-    public String text(String a, String b, String c) {
-        return "";
+    public static void main(String[] args) {
+        String[] strings = {"aaa", "bbb", "ccc"};
+        String string = text(strings);
+        System.out.println(string);
     }
 
 }

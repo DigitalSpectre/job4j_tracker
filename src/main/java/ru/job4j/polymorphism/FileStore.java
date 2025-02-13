@@ -1,6 +1,6 @@
 package ru.job4j.polymorphism;
 
-public class FileStore {
+public class FileStore implements Store {
     private String path;
 
     public FileStore() { }
@@ -10,7 +10,7 @@ public class FileStore {
     }
 
     public void save(String data) {
-        //Тут реализация хранения данных в файле
+        //Тут реализация хранения данные в файле
     }
 
     public String read() {

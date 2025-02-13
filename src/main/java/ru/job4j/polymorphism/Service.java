@@ -1,9 +1,9 @@
 package ru.job4j.polymorphism;
 
 public class Service {
-    private FileStore store;
+    private Store store;
 
-    public Service(FileStore store) {
+    public Service(Store store) {
         this.store = store;
     }
 
@@ -12,7 +12,8 @@ public class Service {
     }
 
     public static void main(String[] args) {
-        MemoryStore store = new MemoryStore();
+        FileStore store = new FileStore();
+        /*      MemoryStore store = new MemoryStore();    */
         Service service = new Service(store);
         service.add();
     }

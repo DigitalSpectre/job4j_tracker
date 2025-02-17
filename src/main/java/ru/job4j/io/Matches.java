@@ -1,5 +1,6 @@
 package ru.job4j.io;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Matches {
@@ -16,6 +17,8 @@ public class Matches {
                 count -= matches;
                 turn = !turn;
                 System.out.println("Осталось спичек: " + count);
+            } else {
+                System.out.println("Игрок ввёл неверное количество спичек. Попробуй ещё раз.");
             }
         }
         if (!turn) {

@@ -8,13 +8,11 @@ public class Main {
         townCar.steer();
         townCar.brake();
 
-        SportCar sportCar = new SportCar();
-        Vehicle vehicle = sportCar;
-        Fuel fuel = sportCar;
-        vehicle.changeGear();
-        vehicle.accelerate();
-        vehicle.steer();
-        vehicle.brake();
-        fuel.refill();
+        Vehicle sportCar = new SportCar();
+        sportCar.changeGear();
+        sportCar.accelerate();
+        sportCar.steer();
+        sportCar.brake();
+        sportCar.refill();
     }
 }

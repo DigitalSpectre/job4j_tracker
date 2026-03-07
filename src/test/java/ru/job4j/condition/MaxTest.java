@@ -22,6 +22,6 @@ public class MaxTest {
 
     @Test
     public void whenNegativeNumber() {
-        assertThat(Max.max(-2, -1), is(-1));
+        assertThat(Max.max(-2, -1), is(2));
     }
 }

@@ -24,7 +24,7 @@ public class StartUI {
                 "Удалить заявку", "Показать заявку по id", "Показать заявки по имени",
                 "Завершить программу"
         };
-        output.println("Меню: ");
+        output.println("===       Меню:       ===");
         for (int i = 0; i < actions.length; i++) {
             output.println(i + ". " + actions[i].name());
         }

@@ -8,8 +8,11 @@ public class JdbcConfig {
         /*load jdbc*/
     }
 
-    public static void main(String[] args) <strong>throws UserInputException</strong> {
-
-                load("jdbc://localhost:8080");
+    public static void main(String[] args) {
+        try {
+            load("jdbc://localhost:8080");
+        } catch (UserInputException e) {
+            e.printStackTrace();
+        }
     }
 }

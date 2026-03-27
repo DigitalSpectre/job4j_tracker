@@ -25,26 +25,24 @@ public class PhoneNumberValidator {
 
     }
 
-    public static ValidationResult validPhoneNumber4(String phoneNumber) {
-        ValidationResult result = null;
-        var totalParts = phoneNumber.split(" ");
+    public static ValidationResult validPhoneNumber(String phoneNumber) {
+
+        String[] totalParts = phoneNumber.split(" ");
         if (totalParts.length != 2) {
-            result = new ValidationResult(ValidationResult.Status.INVALID, "String is not consisted from two parts, delimited by space");
+            return new ValidationResult(ValidationResult.Status.INVALID, "String is not consisted from two parts, delimited by space");
         }
-        if (result == null) {
-            var number = totalParts[1];
-            var numberParts = number.split("-");
-            if (numberParts.length != 2) {
-                result = new ValidationResult(ValidationResult.Status.INVALID, "Number is not consisted from two parts, delimited by -");
-            }
-            if (result == null && (!isNumeric(totalParts[0]) || !isNumeric(number))) {
-                result = new ValidationResult(ValidationResult.Status.INVALID, "String contains denied charaters");
-            }
+
+        String number = totalParts[1];
+        String[] numberParts = number.split("-");
+        if (numberParts.length != 2) {
+            return new ValidationResult(ValidationResult.Status.INVALID, "Number is not consisted from two parts, delimited by -");
         }
-        if (result == null) {
-            result = new ValidationResult(ValidationResult.Status.VALID, "Valid");
+
+        if (!isNumeric(totalParts[0]) || !isNumeric(number)) {
+            return new ValidationResult(ValidationResult.Status.INVALID, "String contains denied charaters");
         }
-        return result;
+
+        return new ValidationResult(ValidationResult.Status.VALID, "Valid");
     }
 
     private static boolean isNumeric(String string) {

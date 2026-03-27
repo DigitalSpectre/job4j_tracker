@@ -54,6 +54,9 @@ public class StartUI {
                 new FindByNameAction(output),
                 new ExitAction(output)
         };
+        Log4File log = Log4File.getInstance();
+        log.add("add new Item");
+        log.save();
         new StartUI(output).init(input, tracker, actions);
     }
 }

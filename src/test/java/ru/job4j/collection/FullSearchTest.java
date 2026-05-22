@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FullSearchTest {
 
     @Test
-    public  void whenExtractNumberWithDuplicates() {
+    public void whenExtractNumberWithDuplicates() {
         FullSearch fullSearch = new FullSearch();
         List tasks = Arrays.asList(
                 new Task("1", "First desc"),
